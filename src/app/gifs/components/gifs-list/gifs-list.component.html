@@ -1,0 +1,10 @@
+<p>gifs-list works!</p>
+<!-- Gallery -->
+<div class="row row-cols-1 row-cols-md-3  g-4">
+   @for (item of img(); track $index) {
+
+     <app-gifs-list-item [img]="item"></app-gifs-list-item>
+   }
+   
+  </div>
+  <!-- Gallery -->

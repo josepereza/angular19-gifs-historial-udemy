@@ -1,0 +1,13 @@
+    <h2>Buscar Gifs</h2>
+    <h3>Buscar Gifs por nombre, descripcion o tags</h3>
+
+<section>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Buscar</span>
+        <input type="text" (keyup.enter)="onSearch(txtSearch.value)" class="form-control" #txtSearch placeholder="Buscar Gifs" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+</section>
+
+<section>
+    <app-gifs-list [img]="gifs()"></app-gifs-list>
+</section>

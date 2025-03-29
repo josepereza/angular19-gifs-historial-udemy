@@ -1,0 +1,64 @@
+<div class="d-flex">
+    <div class="izq">
+      <div class="d-flex flex-column p-3 text-white bg-dark" style="width: 280px; height: 100vmin;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+          <span class="fs-4">{{mititulo}}</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto text-white">
+          <li class="nav-item">
+            <a routerLink="trending" routerLinkActive="active"class="nav-link " aria-current="page">
+            
+              <svg class="bi me-2 bi-graph-up-arrow" width="16" height="16"  xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+              </svg>
+              Trending
+
+            </a>
+          </li>
+          <li>
+            <a routerLink="search" routerLinkActive="active"class="nav-link " aria-current="page">
+              <i class="me-2 bi-search" style="font-size: 1rem; color: rgb(224, 227, 235);"></i>
+                            Search
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <i class="me-2 bi-stack" style="font-size: 1rem; color: rgb(224, 227, 235);"></i>
+             History
+             <br>          
+            <br>
+
+             @for (item of gifService.searchHistoryKeys(); track $index) {
+              <a [routerLink] = "['history', item]">{{item}}</a>
+               <br>
+             }
+           
+
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+              Customers
+            </a>
+          </li>
+        </ul>
+        <hr>
+       
+      </div>
+  </div>
+  <div class="dcha container">
+    <h2>contenido</h2>
+    <router-outlet></router-outlet>
+  
+  </div>
+  </div>
+  
